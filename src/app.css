@@ -1,0 +1,83 @@
+path {
+  stroke-opacity: none;
+  stroke-linecap: none;
+  stroke-linejoin: none;
+  stroke-width: 15px;
+  fill-opacity: none;
+  fill: none;
+}
+
+.flex-center {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.puff-in-center {
+    animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.color-change-5x path {
+    animation: color-change-5x 8s linear infinite alternate both;
+}
+
+.rotate-center-infinte {
+    animation: rotate-center 2s linear 0.7s infinite both;
+}
+
+.write path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 2s linear alternate both;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes color-change-5x {
+    0% {
+      stroke: #19dcea;
+    }
+    25% {
+      stroke: #b22cff;
+    }
+    50% {
+      stroke: #ea2222;
+    }
+    75% {
+      stroke: #f5be10;
+    }
+    100% {
+      stroke: #3bd80d;
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
+@keyframes puff-in-center {
+    0% {
+      transform: scale(2);
+      filter: blur(2px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+    }
+}
+  

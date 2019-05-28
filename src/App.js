@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './app.css';
+import Eye from './eyes/Eye';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.modes = ["", "closed", "open", "happy", "angry", "love"]
+    this.state = {currentMode: 0};
+  }
+
+  clickEvent = () => {
+    let sum = this.state.currentMode + 1
+    let changeMode = sum > this.modes.length - 1 ? 0 : sum
+    this.setState({
+      currentMode: changeMode
+    })
+  }
+
+  render() {
+    return (
+      <div onClick={this.clickEvent} className="flex-center">
+        <Eye mode={this.modes[this.state.currentMode]} position="left" />
+        <Eye mode={this.modes[this.state.currentMode]} position="right" />
+      </div>
+    );
+  }
 }
 
 export default App;
