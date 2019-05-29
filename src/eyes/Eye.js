@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import closed from './paths/closed'
 import angry from './paths/angry'
 import open from './paths/open'

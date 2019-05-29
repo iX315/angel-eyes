@@ -1,12 +1,12 @@
-import React from 'react';
-import './app.css';
-import Eye from './eyes/Eye';
+import React from 'react'
+import './app.css'
+import Eye from './eyes/Eye'
 
 class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.modes = ["", "closed", "open", "happy", "angry", "love"]
-    this.state = {currentMode: 0};
+    this.state = {currentMode: 0}
   }
 
   clickEvent = () => {
@@ -23,8 +23,8 @@ class App extends React.Component {
         <Eye mode={this.modes[this.state.currentMode]} position="left" />
         <Eye mode={this.modes[this.state.currentMode]} position="right" />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
