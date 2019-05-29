@@ -5,23 +5,20 @@ import Eye from './eyes/Eye'
 class App extends React.Component {
   constructor(props) {
     super(props)
-    this.modes = ["", "closed", "open", "happy", "angry", "love"]
-    this.state = {currentMode: 0}
+    this.state = {mode: 0}
   }
 
   clickEvent = () => {
-    let sum = this.state.currentMode + 1
-    let changeMode = sum > this.modes.length - 1 ? 0 : sum
-    this.setState({
-      currentMode: changeMode
-    })
+    let sum = this.state.mode + 1
+    let mode = sum > 4 ? 0 : sum
+    this.setState({mode})
   }
 
   render() {
     return (
       <div onClick={this.clickEvent} className="flex-center">
-        <Eye mode={this.modes[this.state.currentMode]} position="left" />
-        <Eye mode={this.modes[this.state.currentMode]} position="right" />
+        <Eye mode={this.state.mode} position="left" />
+        <Eye mode={this.state.mode} position="right" />
       </div>
     )
   }
