@@ -2,6 +2,7 @@
   "name": "angel-eyes",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "flubber": "^0.4.2",
     "react": "^16.8.6",
