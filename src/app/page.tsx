@@ -3,6 +3,7 @@ import { useState } from "react";
 import { SvgInterpolator } from "./components/SvgInterpolator";
 import { angryOpen, closed, happy, love, open } from "./components/eyes/shapes";
 import { Shape } from "flubber";
+import { Button } from "./components/Button";
 
 export default function Home() {
   const [current, setCurrent] = useState(open);
@@ -24,36 +25,11 @@ export default function Home() {
         />
       </div>
       <div className="flex gap-2">
-        <button
-          className="p-2 border border-red-100"
-          onClick={() => handleChange(open)}
-        >
-          open
-        </button>
-        <button
-          className="p-2 border border-red-100"
-          onClick={() => handleChange(closed)}
-        >
-          closed
-        </button>
-        <button
-          className="p-2 border border-red-100"
-          onClick={() => handleChange(angryOpen)}
-        >
-          angry
-        </button>
-        <button
-          className="p-2 border border-red-100"
-          onClick={() => handleChange(happy)}
-        >
-          happy
-        </button>
-        <button
-          className="p-2 border border-red-100"
-          onClick={() => handleChange(love)}
-        >
-          love
-        </button>
+        <Button onClick={() => handleChange(open)}>open</Button>
+        <Button onClick={() => handleChange(closed)}>closed</Button>
+        <Button onClick={() => handleChange(angryOpen)}>angry</Button>
+        <Button onClick={() => handleChange(happy)}>happy</Button>
+        <Button onClick={() => handleChange(love)}>love</Button>
       </div>
     </main>
   );
