@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": [],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "react/jsx-key": [
+          "warn",
+          {
+            "checkFragmentShorthand": true
+          }
+        ],
+        "tailwindcss/no-custom-classname": [
+          "warn",
+          {
+            "config": "tailwind.config.js"
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.js", "*.cjs"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ],
+  "extends": ["next/core-web-vitals"]
 }
