@@ -1,4 +1,2 @@
-import {Shape} from 'flubber'
-
-export const love: Shape =
+export const love =
   'm150.04445,101.78524c37.45908,-107.07248 184.22498,0 0,137.66461c-184.22498,-137.66461 -37.45908,-244.73709 0,-137.66461z'

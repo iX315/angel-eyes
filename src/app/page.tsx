@@ -2,30 +2,26 @@
 import {useState} from 'react'
 import {SvgInterpolator} from './components/SvgInterpolator'
 import {angryOpen, closed, happy, love, open} from './components/eyes/shapes'
-import {Shape} from 'flubber'
-import {Button} from './components/Button'
+import { useInterval } from 'usehooks-ts'
+
+const svgs = [open, angryOpen, closed, happy, love]
 
 export default function Home() {
-  const [current, setCurrent] = useState(open)
-  const [previous, setPrevious] = useState<Shape>()
+  const [index, setIndex] = useState(0)
 
-  const handleChange = (newShape: Shape) => {
-    setPrevious(current)
-    setCurrent(newShape)
-  }
+  useInterval(() => {
+    if (index >= svgs.length - 1) {
+      setIndex(0)
+    } else {
+      setIndex(index + 1)
+    }
+  }, 3000)
 
   return (
     <main>
       <div className="flex min-h-screen items-center justify-around p-24">
-        <SvgInterpolator current={current} previous={previous} />
-        <SvgInterpolator current={current} previous={previous} style={{transform: 'scale(-1, 1)'}} />
-      </div>
-      <div className="flex gap-2">
-        <Button onClick={() => handleChange(open)}>open</Button>
-        <Button onClick={() => handleChange(closed)}>closed</Button>
-        <Button onClick={() => handleChange(angryOpen)}>angry</Button>
-        <Button onClick={() => handleChange(happy)}>happy</Button>
-        <Button onClick={() => handleChange(love)}>love</Button>
+        <SvgInterpolator previous={svgs[index - 1] ?? undefined} current={svgs[index]} />
+        <SvgInterpolator previous={svgs[index - 1] ?? undefined} current={svgs[index]} style={{transform: 'scale(-1, 1)'}} />
       </div>
     </main>
   )

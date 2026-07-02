@@ -1,3 +1,1 @@
-import {Shape} from 'flubber'
-
-export const closed: Shape = 'm30,150.28125l240,-0.5625'
+export const closed = 'M 150.735 195.717 L 319.312 196.517'
