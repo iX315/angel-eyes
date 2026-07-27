@@ -1,6 +1,6 @@
-import {Spring, animated} from 'react-spring'
-import {interpolate} from 'polymorph-js'
-import {CSSProperties} from 'react'
+import { Spring, animated } from 'react-spring'
+import { interpolate } from 'polymorph-js'
+import { CSSProperties } from 'react'
 
 type SvgInterpolatorProps = {
   previous?: string
@@ -8,7 +8,7 @@ type SvgInterpolatorProps = {
   style?: CSSProperties
 }
 
-export const SvgInterpolator = ({previous = 'M1,1', current = 'M5,5', style}: SvgInterpolatorProps) => (
+export const SvgInterpolator = ({ previous = 'M1,1', current = 'M5,5', style }: SvgInterpolatorProps) => (
   <svg width="300" height="300" xmlns="http://www.w3.org/2000/svg" style={style}>
     <defs>
       <linearGradient id="gradient" x1="100%" y1="0%" x2="0%" y2="0%">

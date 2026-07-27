@@ -5,38 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
-    "@types/node": "20.4.6",
-    "@types/react": "18.2.18",
-    "@types/react-dom": "18.2.7",
-    "autoprefixer": "10.4.14",
-    "eslint": "^8.51.0",
-    "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
+    "@types/node": "26.1.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "eslint": "^10.8.0",
+    "next": "16.2.12",
     "polymorph-js": "^1.0.2",
-    "postcss": "8.4.27",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-spring": "^9.7.2",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss": "3.3.3",
-    "typescript": "5.1.6",
-    "usehooks-ts": "^2.9.1"
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-spring": "^10.0.4",
+    "tailwind-merge": "^3.6.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "7.0.2",
+    "usehooks-ts": "^3.1.1"
   },
   "devDependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.5",
-    "@typescript-eslint/parser": "^6.7.5",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.33.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-tailwindcss": "^3.13.0",
-    "prettier": "^3.0.3",
-    "prettier-plugin-tailwindcss": "^0.5.6"
+    "@ix315/eslint-config": "^1.2.0"
   }
 }
